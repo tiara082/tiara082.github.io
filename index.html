@@ -1,0 +1,720 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Tiara Febrianie | Software Engineer & Full-Stack Developer</title>
+  <meta name="description" content="Portfolio of Tiara Febrianie - Software Engineering student at Politeknik Negeri Malang specializing in Full-Stack and Backend Development.">
+  
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+  
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  
+  <!-- Lucide Icons -->
+  <script src="https://unpkg.com/lucide@latest"></script>
+
+  <script>
+    tailwind.config = {
+      darkMode: 'class',
+      theme: {
+        extend: {
+          fontFamily: {
+            sans: ['"Plus Jakarta Sans"', 'sans-serif'],
+            mono: ['"JetBrains Mono"', 'monospace'],
+          },
+          colors: {
+            brand: {
+              50: '#f5f3ff',
+              100: '#ede9fe',
+              500: '#8b5cf6',
+              600: '#7c3aed',
+              700: '#6d28d9',
+              dark: '#0B0F19',
+              card: '#111827',
+              border: '#1F2937'
+            }
+          }
+        }
+      }
+    }
+  </script>
+
+  <style>
+    /* Custom Glow and Blur Effects */
+    .glow-gradient {
+      background: radial-gradient(circle at 50% 0%, rgba(124, 58, 237, 0.18) 0%, rgba(14, 165, 233, 0.08) 50%, transparent 80%);
+    }
+    .glass-card {
+      background: rgba(17, 24, 39, 0.75);
+      backdrop-filter: blur(12px);
+      border: 1px solid rgba(255, 255, 255, 0.07);
+    }
+    .glass-card:hover {
+      border-color: rgba(139, 92, 246, 0.35);
+    }
+    .glass-nav {
+      background: rgba(11, 15, 25, 0.82);
+      backdrop-filter: blur(16px);
+      border-bottom: 1px solid rgba(255, 255, 255, 0.06);
+    }
+    /* Hide scrollbars for filter tabs */
+    .no-scrollbar::-webkit-scrollbar {
+      display: none;
+    }
+    .no-scrollbar {
+      -ms-overflow-style: none;
+      scrollbar-width: none;
+    }
+  </style>
+</head>
+<body class="bg-[#0B0F19] text-slate-100 font-sans antialiased selection:bg-purple-600 selection:text-white relative min-h-screen">
+
+  <!-- Ambient Light Effect -->
+  <div class="fixed top-0 left-0 right-0 h-[550px] glow-gradient pointer-events-none z-0"></div>
+
+  <!-- Navigation -->
+  <header class="fixed top-0 left-0 right-0 z-50 glass-nav transition-all duration-300">
+    <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 h-16 flex items-center justify-between">
+      <a href="#hero" class="flex items-center gap-2 group">
+        <div class="w-9 h-9 rounded-xl bg-gradient-to-tr from-purple-600 to-indigo-500 flex items-center justify-center font-bold text-white shadow-lg shadow-purple-500/20 group-hover:scale-105 transition-transform">
+          TF
+        </div>
+        <span class="font-bold text-base tracking-tight text-white group-hover:text-purple-300 transition-colors">
+          Tiara Febrianie
+        </span>
+      </a>
+
+      <!-- Desktop Nav -->
+      <nav class="hidden md:flex items-center gap-7 text-sm font-medium text-slate-300">
+        <a href="#about" class="hover:text-purple-400 transition-colors">About</a>
+        <a href="#projects" class="hover:text-purple-400 transition-colors">Projects</a>
+        <a href="#skills" class="hover:text-purple-400 transition-colors">Skills</a>
+        <a href="#experience" class="hover:text-purple-400 transition-colors">Experience</a>
+        <a href="#honors" class="hover:text-purple-400 transition-colors">Achievements</a>
+      </nav>
+
+      <!-- CTA & Socials -->
+      <div class="flex items-center gap-3">
+        <a href="https://github.com/tiara082" target="_blank" rel="noopener noreferrer" 
+           class="p-2 text-slate-400 hover:text-white hover:bg-slate-800/80 rounded-lg transition-colors" title="GitHub Profile">
+          <i data-lucide="github" class="w-5 h-5"></i>
+        </a>
+        <a href="https://linkedin.com/in/tiara-febrianie" target="_blank" rel="noopener noreferrer" 
+           class="p-2 text-slate-400 hover:text-blue-400 hover:bg-slate-800/80 rounded-lg transition-colors" title="LinkedIn Profile">
+          <i data-lucide="linkedin" class="w-5 h-5"></i>
+        </a>
+        <a href="#contact" class="hidden sm:inline-flex items-center gap-2 px-4 py-2 text-xs font-semibold rounded-lg bg-purple-600 hover:bg-purple-500 text-white shadow-md shadow-purple-600/25 transition-all">
+          <span>Get in Touch</span>
+          <i data-lucide="mail" class="w-3.5 h-3.5"></i>
+        </a>
+      </div>
+    </div>
+  </header>
+
+  <main class="relative z-10 max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 pt-28 pb-20">
+
+    <!-- HERO SECTION -->
+    <section id="hero" class="pt-8 sm:pt-16 pb-16">
+      <div class="flex flex-col lg:flex-row items-start lg:items-center justify-between gap-10">
+        
+        <div class="flex-1 space-y-6">
+          <div class="inline-flex items-center gap-2.5 px-3.5 py-1.5 rounded-full text-xs font-medium bg-purple-950/70 border border-purple-500/30 text-purple-300">
+            <span class="w-2 h-2 rounded-full bg-emerald-400 animate-pulse"></span>
+            Open for Internship & Collaborations
+          </div>
+
+          <div class="space-y-3">
+            <h1 class="text-3xl sm:text-5xl lg:text-6xl font-extrabold tracking-tight text-white leading-tight">
+              Hi, I'm <span class="text-transparent bg-clip-text bg-gradient-to-r from-purple-400 via-violet-300 to-indigo-300">Tiara Febrianie</span>
+            </h1>
+            <p class="text-lg sm:text-xl font-medium text-slate-300">
+              Software Engineer & Full-Stack Developer
+            </p>
+          </div>
+
+          <p class="text-slate-400 text-base max-w-2xl leading-relaxed">
+            Information Technology student at <strong class="text-slate-200">Politeknik Negeri Malang (International Class)</strong>. 
+            Passionate about architecting robust backends, scalable RESTful APIs, and crafting intuitive web and mobile solutions with 
+            Laravel, Next.js, Express, and Android.
+          </p>
+
+          <div class="flex flex-wrap items-center gap-3 pt-2">
+            <a href="#projects" class="inline-flex items-center gap-2 px-5 py-2.5 rounded-xl bg-purple-600 hover:bg-purple-500 text-white font-medium text-sm transition-all shadow-lg shadow-purple-600/30">
+              <i data-lucide="folder-code" class="w-4 h-4"></i>
+              View Projects
+            </a>
+            <a href="https://github.com/tiara082" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-2 px-5 py-2.5 rounded-xl glass-card text-slate-200 hover:text-white font-medium text-sm transition-all">
+              <i data-lucide="github" class="w-4 h-4"></i>
+              GitHub tiara082
+            </a>
+            <a href="mailto:tiarafebrianie308@gmail.com" class="inline-flex items-center gap-2 px-4 py-2.5 rounded-xl glass-card text-slate-300 hover:text-purple-300 font-medium text-sm transition-all">
+              <i data-lucide="mail" class="w-4 h-4"></i>
+              Email Me
+            </a>
+          </div>
+        </div>
+
+        <!-- Quick Stats Bento Card -->
+        <div class="w-full lg:w-80 shrink-0">
+          <div class="glass-card rounded-2xl p-5 space-y-4 border border-purple-500/20 shadow-xl shadow-purple-900/10">
+            <div class="flex items-center gap-3 border-b border-slate-800 pb-3">
+              <div class="w-10 h-10 rounded-full bg-purple-500/20 flex items-center justify-center text-purple-400">
+                <i data-lucide="sparkles" class="w-5 h-5"></i>
+              </div>
+              <div>
+                <h3 class="text-sm font-semibold text-white">Academic & Profile</h3>
+                <p class="text-xs text-slate-400">Polinema & SMK N 11 Malang</p>
+              </div>
+            </div>
+
+            <div class="grid grid-cols-2 gap-3 text-left">
+              <div class="p-3 rounded-xl bg-slate-900/60 border border-slate-800">
+                <span class="text-xs text-slate-400">Current GPA</span>
+                <p class="text-xl font-bold text-emerald-400 mt-0.5">3.85<span class="text-xs text-slate-500 font-normal">/4.00</span></p>
+              </div>
+              <div class="p-3 rounded-xl bg-slate-900/60 border border-slate-800">
+                <span class="text-xs text-slate-400">TOEIC Score</span>
+                <p class="text-xl font-bold text-purple-300 mt-0.5">850<span class="text-xs text-slate-500 font-normal"> ETS</span></p>
+              </div>
+              <div class="p-3 rounded-xl bg-slate-900/60 border border-slate-800">
+                <span class="text-xs text-slate-400">SMK 11 Malang</span>
+                <p class="text-base font-bold text-amber-300 mt-0.5">1st Rank <span class="text-xs text-slate-400 font-normal">RPL</span></p>
+              </div>
+              <div class="p-3 rounded-xl bg-slate-900/60 border border-slate-800">
+                <span class="text-xs text-slate-400">Hackathon Win</span>
+                <p class="text-base font-bold text-cyan-300 mt-0.5">1st Place <span class="text-xs text-slate-400 font-normal">UB</span></p>
+              </div>
+            </div>
+
+            <div class="pt-1 flex items-center justify-between text-xs text-slate-400">
+              <span class="flex items-center gap-1.5"><i data-lucide="map-pin" class="w-3.5 h-3.5 text-purple-400"></i> Malang, Indonesia</span>
+              <span class="flex items-center gap-1.5"><i data-lucide="globe" class="w-3.5 h-3.5 text-blue-400"></i> International Class</span>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ABOUT SECTION -->
+    <section id="about" class="py-14 border-t border-slate-800/80">
+      <div class="flex items-center gap-2 text-purple-400 text-xs font-semibold tracking-wider uppercase mb-2">
+        <i data-lucide="user" class="w-4 h-4"></i> About Me
+      </div>
+      <h2 class="text-2xl sm:text-3xl font-bold text-white mb-6">Education & Background</h2>
+
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+        <!-- Education Card 1 -->
+        <div class="glass-card rounded-2xl p-6 transition-all hover:-translate-y-1">
+          <div class="flex items-start justify-between gap-4 mb-3">
+            <div>
+              <span class="text-xs font-mono px-2.5 py-1 rounded-md bg-purple-900/40 text-purple-300 border border-purple-800/50">2024 – 2028 (Expected)</span>
+              <h3 class="text-lg font-bold text-white mt-2">Politeknik Negeri Malang</h3>
+              <p class="text-sm text-purple-300 font-medium">Bachelor of Applied Science in Information Technology (International Class)</p>
+            </div>
+            <div class="shrink-0 px-2.5 py-1 rounded-lg bg-emerald-950/60 text-emerald-400 border border-emerald-800/40 text-xs font-semibold">
+              GPA 3.85 / 4.00
+            </div>
+          </div>
+          <p class="text-sm text-slate-400 leading-relaxed mt-3">
+            <strong>Key Coursework:</strong> Web Development & Programming, Database Management Systems, Software Engineering, UI/UX Design, and Information Systems Management.
+          </p>
+        </div>
+
+        <!-- Education Card 2 -->
+        <div class="glass-card rounded-2xl p-6 transition-all hover:-translate-y-1">
+          <div class="flex items-start justify-between gap-4 mb-3">
+            <div>
+              <span class="text-xs font-mono px-2.5 py-1 rounded-md bg-slate-800 text-slate-300 border border-slate-700">2021 – 2024</span>
+              <h3 class="text-lg font-bold text-white mt-2">SMK Negeri 11 Malang</h3>
+              <p class="text-sm text-purple-300 font-medium">Software Engineering Program (RPL)</p>
+            </div>
+            <div class="shrink-0 px-2.5 py-1 rounded-lg bg-amber-950/60 text-amber-300 border border-amber-800/40 text-xs font-semibold">
+              Top Graduate (1st Rank)
+            </div>
+          </div>
+          <p class="text-sm text-slate-400 leading-relaxed mt-3">
+            Built solid foundations in Java programming, web systems, and participated actively in robotics extracurriculars fostering agile collaboration and competitive engineering skills.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- SKILLS SECTION -->
+    <section id="skills" class="py-14 border-t border-slate-800/80">
+      <div class="flex items-center gap-2 text-purple-400 text-xs font-semibold tracking-wider uppercase mb-2">
+        <i data-lucide="cpu" class="w-4 h-4"></i> Tech Stack & Tools
+      </div>
+      <h2 class="text-2xl sm:text-3xl font-bold text-white mb-6">Skills & Technologies</h2>
+
+      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-5">
+        <!-- Backend -->
+        <div class="glass-card rounded-2xl p-5">
+          <div class="w-8 h-8 rounded-lg bg-violet-500/20 flex items-center justify-center text-violet-400 mb-3">
+            <i data-lucide="server" class="w-4 h-4"></i>
+          </div>
+          <h3 class="font-bold text-white text-sm mb-2.5">Backend & API</h3>
+          <div class="flex flex-wrap gap-1.5 text-xs">
+            <span class="px-2 py-1 rounded-md bg-slate-800 text-slate-300">Laravel 12</span>
+            <span class="px-2 py-1 rounded-md bg-slate-800 text-slate-300">PHP</span>
+            <span class="px-2 py-1 rounded-md bg-slate-800 text-slate-300">Express.js</span>
+            <span class="px-2 py-1 rounded-md bg-slate-800 text-slate-300">NestJS</span>
+            <span class="px-2 py-1 rounded-md bg-slate-800 text-slate-300">Node.js</span>
+            <span class="px-2 py-1 rounded-md bg-slate-800 text-slate-300">RESTful API</span>
+            <span class="px-2 py-1 rounded-md bg-slate-800 text-slate-300">Filament 4</span>
+          </div>
+        </div>
+
+        <!-- Frontend & Mobile -->
+        <div class="glass-card rounded-2xl p-5">
+          <div class="w-8 h-8 rounded-lg bg-sky-500/20 flex items-center justify-center text-sky-400 mb-3">
+            <i data-lucide="layout" class="w-4 h-4"></i>
+          </div>
+          <h3 class="font-bold text-white text-sm mb-2.5">Frontend & Mobile</h3>
+          <div class="flex flex-wrap gap-1.5 text-xs">
+            <span class="px-2 py-1 rounded-md bg-slate-800 text-slate-300">Next.js</span>
+            <span class="px-2 py-1 rounded-md bg-slate-800 text-slate-300">React</span>
+            <span class="px-2 py-1 rounded-md bg-slate-800 text-slate-300">TypeScript</span>
+            <span class="px-2 py-1 rounded-md bg-slate-800 text-slate-300">Nuxt</span>
+            <span class="px-2 py-1 rounded-md bg-slate-800 text-slate-300">Tailwind CSS</span>
+            <span class="px-2 py-1 rounded-md bg-slate-800 text-slate-300">Android (Kotlin)</span>
+            <span class="px-2 py-1 rounded-md bg-slate-800 text-slate-300">Zustand</span>
+          </div>
+        </div>
+
+        <!-- Database & Cloud -->
+        <div class="glass-card rounded-2xl p-5">
+          <div class="w-8 h-8 rounded-lg bg-emerald-500/20 flex items-center justify-center text-emerald-400 mb-3">
+            <i data-lucide="database" class="w-4 h-4"></i>
+          </div>
+          <h3 class="font-bold text-white text-sm mb-2.5">Database & Cloud</h3>
+          <div class="flex flex-wrap gap-1.5 text-xs">
+            <span class="px-2 py-1 rounded-md bg-slate-800 text-slate-300">PostgreSQL</span>
+            <span class="px-2 py-1 rounded-md bg-slate-800 text-slate-300">Supabase</span>
+            <span class="px-2 py-1 rounded-md bg-slate-800 text-slate-300">Prisma ORM</span>
+            <span class="px-2 py-1 rounded-md bg-slate-800 text-slate-300">TypeORM</span>
+            <span class="px-2 py-1 rounded-md bg-slate-800 text-slate-300">Redis</span>
+            <span class="px-2 py-1 rounded-md bg-slate-800 text-slate-300">AWS S3</span>
+            <span class="px-2 py-1 rounded-md bg-slate-800 text-slate-300">Midtrans</span>
+          </div>
+        </div>
+
+        <!-- Architecture & Other -->
+        <div class="glass-card rounded-2xl p-5">
+          <div class="w-8 h-8 rounded-lg bg-amber-500/20 flex items-center justify-center text-amber-400 mb-3">
+            <i data-lucide="git-branch" class="w-4 h-4"></i>
+          </div>
+          <h3 class="font-bold text-white text-sm mb-2.5">Workflow & Special</h3>
+          <div class="flex flex-wrap gap-1.5 text-xs">
+            <span class="px-2 py-1 rounded-md bg-slate-800 text-slate-300">Agile / Scrum</span>
+            <span class="px-2 py-1 rounded-md bg-slate-800 text-slate-300">Socket.IO</span>
+            <span class="px-2 py-1 rounded-md bg-slate-800 text-slate-300">MQTT (IoT)</span>
+            <span class="px-2 py-1 rounded-md bg-slate-800 text-slate-300">Groq AI</span>
+            <span class="px-2 py-1 rounded-md bg-slate-800 text-slate-300">Git / GitHub</span>
+            <span class="px-2 py-1 rounded-md bg-slate-800 text-slate-300">Leaflet GIS</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- PROJECTS SECTION -->
+    <section id="projects" class="py-14 border-t border-slate-800/80">
+      <div class="flex flex-col sm:flex-row sm:items-end justify-between gap-4 mb-8">
+        <div>
+          <div class="flex items-center gap-2 text-purple-400 text-xs font-semibold tracking-wider uppercase mb-2">
+            <i data-lucide="code" class="w-4 h-4"></i> Showcase
+          </div>
+          <h2 class="text-2xl sm:text-3xl font-bold text-white">Featured Projects</h2>
+        </div>
+
+        <!-- Filter Buttons -->
+        <div class="flex items-center gap-2 overflow-x-auto no-scrollbar pb-1">
+          <button onclick="filterProjects('all')" class="filter-btn active px-3.5 py-1.5 rounded-lg text-xs font-semibold bg-purple-600 text-white transition-all" data-category="all">
+            All
+          </button>
+          <button onclick="filterProjects('backend')" class="filter-btn px-3.5 py-1.5 rounded-lg text-xs font-semibold bg-slate-800 text-slate-300 hover:bg-slate-700 transition-all" data-category="backend">
+            Backend
+          </button>
+          <button onclick="filterProjects('fullstack')" class="filter-btn px-3.5 py-1.5 rounded-lg text-xs font-semibold bg-slate-800 text-slate-300 hover:bg-slate-700 transition-all" data-category="fullstack">
+            Full-Stack
+          </button>
+          <button onclick="filterProjects('mobile-iot')" class="filter-btn px-3.5 py-1.5 rounded-lg text-xs font-semibold bg-slate-800 text-slate-300 hover:bg-slate-700 transition-all" data-category="mobile-iot">
+            Mobile / IoT
+          </button>
+        </div>
+      </div>
+
+      <!-- Project Cards Grid -->
+      <div id="project-grid" class="grid grid-cols-1 md:grid-cols-2 gap-6">
+
+        <!-- ActiveHub -->
+        <div class="project-card glass-card rounded-2xl p-6 flex flex-col justify-between transition-all hover:-translate-y-1" data-category="backend">
+          <div>
+            <div class="flex items-start justify-between gap-4 mb-3">
+              <div>
+                <span class="text-[11px] font-semibold text-purple-400 uppercase tracking-wider">Backend Platform</span>
+                <h3 class="text-xl font-bold text-white mt-1">ActiveHub</h3>
+              </div>
+              <span class="px-2.5 py-1 rounded-md text-xs font-medium bg-purple-950/70 text-purple-300 border border-purple-800/40">Laravel 12</span>
+            </div>
+            <p class="text-slate-300 text-sm leading-relaxed mb-4">
+              Engineered backend services for a sports venue booking platform featuring dynamic booking management, public match matchmaking, Midtrans payment gateway, AWS S3 storage, and administrative control using Filament.
+            </p>
+          </div>
+          <div>
+            <div class="flex flex-wrap gap-1.5 mb-4 text-xs">
+              <span class="px-2 py-0.5 rounded bg-slate-800/80 text-slate-300">Laravel 12</span>
+              <span class="px-2 py-0.5 rounded bg-slate-800/80 text-slate-300">PHP</span>
+              <span class="px-2 py-0.5 rounded bg-slate-800/80 text-slate-300">Midtrans</span>
+              <span class="px-2 py-0.5 rounded bg-slate-800/80 text-slate-300">AWS S3</span>
+              <span class="px-2 py-0.5 rounded bg-slate-800/80 text-slate-300">Filament</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- ThriftMap -->
+        <div class="project-card glass-card rounded-2xl p-6 flex flex-col justify-between transition-all hover:-translate-y-1" data-category="fullstack">
+          <div>
+            <div class="flex items-start justify-between gap-4 mb-3">
+              <div>
+                <span class="text-[11px] font-semibold text-sky-400 uppercase tracking-wider">Full Stack & GIS</span>
+                <h3 class="text-xl font-bold text-white mt-1">ThriftMap</h3>
+              </div>
+              <span class="px-2.5 py-1 rounded-md text-xs font-medium bg-sky-950/70 text-sky-300 border border-sky-800/40">Next.js + GIS</span>
+            </div>
+            <p class="text-slate-300 text-sm leading-relaxed mb-4">
+              GIS-enabled marketplace platform built with Next.js, React, and TypeScript. Integrated React Leaflet for interactive geospatial visualization, Stripe payment processing, ML-based product curation, and Zustand state management.
+            </p>
+          </div>
+          <div>
+            <div class="flex flex-wrap gap-1.5 mb-4 text-xs">
+              <span class="px-2 py-0.5 rounded bg-slate-800/80 text-slate-300">Next.js</span>
+              <span class="px-2 py-0.5 rounded bg-slate-800/80 text-slate-300">TypeScript</span>
+              <span class="px-2 py-0.5 rounded bg-slate-800/80 text-slate-300">Leaflet</span>
+              <span class="px-2 py-0.5 rounded bg-slate-800/80 text-slate-300">Stripe</span>
+              <span class="px-2 py-0.5 rounded bg-slate-800/80 text-slate-300">Zustand</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- DeciSmart -->
+        <div class="project-card glass-card rounded-2xl p-6 flex flex-col justify-between transition-all hover:-translate-y-1" data-category="backend">
+          <div>
+            <div class="flex items-start justify-between gap-4 mb-3">
+              <div>
+                <span class="text-[11px] font-semibold text-emerald-400 uppercase tracking-wider">AI Backend Engine</span>
+                <h3 class="text-xl font-bold text-white mt-1">DeciSmart</h3>
+              </div>
+              <span class="px-2.5 py-1 rounded-md text-xs font-medium bg-emerald-950/70 text-emerald-300 border border-emerald-800/40">Groq AI</span>
+            </div>
+            <p class="text-slate-300 text-sm leading-relaxed mb-4">
+              RESTful backend services using Express.js and Supabase for an AI-powered decision support platform. Integrated Groq AI for intelligent recommendation workflows, JWT auth, input validation, and API rate limiting.
+            </p>
+          </div>
+          <div>
+            <div class="flex flex-wrap gap-1.5 mb-4 text-xs">
+              <span class="px-2 py-0.5 rounded bg-slate-800/80 text-slate-300">Express.js</span>
+              <span class="px-2 py-0.5 rounded bg-slate-800/80 text-slate-300">Supabase</span>
+              <span class="px-2 py-0.5 rounded bg-slate-800/80 text-slate-300">Groq AI</span>
+              <span class="px-2 py-0.5 rounded bg-slate-800/80 text-slate-300">JWT Auth</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- RESQ -->
+        <div class="project-card glass-card rounded-2xl p-6 flex flex-col justify-between transition-all hover:-translate-y-1" data-category="mobile-iot">
+          <div>
+            <div class="flex items-start justify-between gap-4 mb-3">
+              <div>
+                <span class="text-[11px] font-semibold text-amber-400 uppercase tracking-wider">Android & IoT</span>
+                <h3 class="text-xl font-bold text-white mt-1">RESQ</h3>
+              </div>
+              <span class="px-2.5 py-1 rounded-md text-xs font-medium bg-amber-950/70 text-amber-300 border border-amber-800/40">Kotlin + MQTT</span>
+            </div>
+            <p class="text-slate-300 text-sm leading-relaxed mb-4">
+              Full-stack Android application for maritime emergency response and man-overboard monitoring. Powered by Kotlin, MQTT protocol, Retrofit RESTful APIs, real-time GPS tracking, and MVVM architecture.
+            </p>
+          </div>
+          <div>
+            <div class="flex flex-wrap gap-1.5 mb-4 text-xs">
+              <span class="px-2 py-0.5 rounded bg-slate-800/80 text-slate-300">Android Kotlin</span>
+              <span class="px-2 py-0.5 rounded bg-slate-800/80 text-slate-300">MQTT</span>
+              <span class="px-2 py-0.5 rounded bg-slate-800/80 text-slate-300">GPS Tracking</span>
+              <span class="px-2 py-0.5 rounded bg-slate-800/80 text-slate-300">MVVM</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Mine-V-App -->
+        <div class="project-card glass-card rounded-2xl p-6 flex flex-col justify-between transition-all hover:-translate-y-1" data-category="backend">
+          <div>
+            <div class="flex items-start justify-between gap-4 mb-3">
+              <div>
+                <span class="text-[11px] font-semibold text-purple-400 uppercase tracking-wider">Enterprise Backend</span>
+                <h3 class="text-xl font-bold text-white mt-1">Mine-V-App</h3>
+              </div>
+              <span class="px-2.5 py-1 rounded-md text-xs font-medium bg-purple-950/70 text-purple-300 border border-purple-800/40">Nuxt + Prisma</span>
+            </div>
+            <p class="text-slate-300 text-sm leading-relaxed mb-4">
+              Mining vehicle management system backend with Nuxt, TypeScript, Prisma, and PostgreSQL. Features multi-level approval workflows, real-time vehicle monitoring with Socket.IO, AWS S3 storage, and Redis caching.
+            </p>
+          </div>
+          <div>
+            <div class="flex flex-wrap gap-1.5 mb-4 text-xs">
+              <span class="px-2 py-0.5 rounded bg-slate-800/80 text-slate-300">Nuxt</span>
+              <span class="px-2 py-0.5 rounded bg-slate-800/80 text-slate-300">TypeScript</span>
+              <span class="px-2 py-0.5 rounded bg-slate-800/80 text-slate-300">Prisma</span>
+              <span class="px-2 py-0.5 rounded bg-slate-800/80 text-slate-300">PostgreSQL</span>
+              <span class="px-2 py-0.5 rounded bg-slate-800/80 text-slate-300">Socket.IO</span>
+              <span class="px-2 py-0.5 rounded bg-slate-800/80 text-slate-300">Redis</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- BeParent & NCS Lab Profile -->
+        <div class="project-card glass-card rounded-2xl p-6 flex flex-col justify-between transition-all hover:-translate-y-1" data-category="backend">
+          <div>
+            <div class="flex items-start justify-between gap-4 mb-3">
+              <div>
+                <span class="text-[11px] font-semibold text-indigo-400 uppercase tracking-wider">NestJS & Laravel</span>
+                <h3 class="text-xl font-bold text-white mt-1">BeParent & NCS Lab</h3>
+              </div>
+              <span class="px-2.5 py-1 rounded-md text-xs font-medium bg-indigo-950/70 text-indigo-300 border border-indigo-800/40">NestJS / Filament</span>
+            </div>
+            <p class="text-slate-300 text-sm leading-relaxed mb-4">
+              <strong>BeParent:</strong> Scalable backend APIs with NestJS and TypeORM for AI-assisted parenting. <br>
+              <strong>NCS Lab Profile:</strong> Official Network & Cyber Security Lab Polinema website built with Laravel 12 and Filament 4.
+            </p>
+          </div>
+          <div>
+            <div class="flex flex-wrap gap-1.5 mb-4 text-xs">
+              <span class="px-2 py-0.5 rounded bg-slate-800/80 text-slate-300">NestJS</span>
+              <span class="px-2 py-0.5 rounded bg-slate-800/80 text-slate-300">TypeORM</span>
+              <span class="px-2 py-0.5 rounded bg-slate-800/80 text-slate-300">Laravel 12</span>
+              <span class="px-2 py-0.5 rounded bg-slate-800/80 text-slate-300">Filament 4</span>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- HONORS & COMPETITIONS -->
+    <section id="honors" class="py-14 border-t border-slate-800/80">
+      <div class="flex items-center gap-2 text-purple-400 text-xs font-semibold tracking-wider uppercase mb-2">
+        <i data-lucide="award" class="w-4 h-4"></i> Achievements
+      </div>
+      <h2 class="text-2xl sm:text-3xl font-bold text-white mb-6">Honors & Competitions</h2>
+
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+        
+        <div class="glass-card rounded-xl p-5 flex items-start gap-4">
+          <div class="w-10 h-10 rounded-lg bg-amber-500/20 text-amber-400 flex items-center justify-center shrink-0">
+            <i data-lucide="trophy" class="w-5 h-5"></i>
+          </div>
+          <div>
+            <div class="flex items-center gap-2">
+              <span class="text-xs font-bold px-2 py-0.5 rounded bg-amber-500/20 text-amber-300">1st Place Winner</span>
+              <span class="text-xs text-slate-400">2025</span>
+            </div>
+            <h4 class="text-base font-bold text-white mt-1">CREANOMIC 2025 – Web Development</h4>
+            <p class="text-xs text-slate-400 mt-1">Universitas Brawijaya</p>
+          </div>
+        </div>
+
+        <div class="glass-card rounded-xl p-5 flex items-start gap-4">
+          <div class="w-10 h-10 rounded-lg bg-purple-500/20 text-purple-400 flex items-center justify-center shrink-0">
+            <i data-lucide="shield-check" class="w-5 h-5"></i>
+          </div>
+          <div>
+            <div class="flex items-center gap-2">
+              <span class="text-xs font-bold px-2 py-0.5 rounded bg-purple-500/20 text-purple-300">Top 480 National Semifinalist</span>
+              <span class="text-xs text-slate-400">2026</span>
+            </div>
+            <h4 class="text-base font-bold text-white mt-1">DIGDAYA X Hackathon 2026</h4>
+            <p class="text-xs text-slate-400 mt-1">Bank Indonesia & OJK — AI & crowdsourced consumer protection platform against financial scams.</p>
+          </div>
+        </div>
+
+        <div class="glass-card rounded-xl p-5 flex items-start gap-4">
+          <div class="w-10 h-10 rounded-lg bg-sky-500/20 text-sky-400 flex items-center justify-center shrink-0">
+            <i data-lucide="lightbulb" class="w-5 h-5"></i>
+          </div>
+          <div>
+            <div class="flex items-center gap-2">
+              <span class="text-xs font-bold px-2 py-0.5 rounded bg-sky-500/20 text-sky-300">3rd Place</span>
+              <span class="text-xs text-slate-400">2026</span>
+            </div>
+            <h4 class="text-base font-bold text-white mt-1">Cipta Inovasi – Internal Competition JTI Polinema</h4>
+            <p class="text-xs text-slate-400 mt-1">Politeknik Negeri Malang</p>
+          </div>
+        </div>
+
+        <div class="glass-card rounded-xl p-5 flex items-start gap-4">
+          <div class="w-10 h-10 rounded-lg bg-emerald-500/20 text-emerald-400 flex items-center justify-center shrink-0">
+            <i data-lucide="medal" class="w-5 h-5"></i>
+          </div>
+          <div>
+            <div class="flex items-center gap-2">
+              <span class="text-xs font-bold px-2 py-0.5 rounded bg-emerald-500/20 text-emerald-300">Selected Team</span>
+              <span class="text-xs text-slate-400">2026</span>
+            </div>
+            <h4 class="text-base font-bold text-white mt-1">Samsung Solve for Tomorrow (SFT) 2026</h4>
+            <p class="text-xs text-slate-400 mt-1">Samsung & Dibimbing — Proposed IoT-based pet waste composting system for local waste facility.</p>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- EXPERIENCE & LEADERSHIP -->
+    <section id="experience" class="py-14 border-t border-slate-800/80">
+      <div class="flex items-center gap-2 text-purple-400 text-xs font-semibold tracking-wider uppercase mb-2">
+        <i data-lucide="briefcase" class="w-4 h-4"></i> Career & Impact
+      </div>
+      <h2 class="text-2xl sm:text-3xl font-bold text-white mb-6">Work & Leadership Experience</h2>
+
+      <div class="space-y-6">
+        
+        <!-- Professional Work -->
+        <div class="glass-card rounded-2xl p-6">
+          <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-2 mb-3">
+            <div>
+              <span class="text-xs font-semibold text-purple-400">Internship Experience</span>
+              <h3 class="text-lg font-bold text-white">PT. Sarastya Technology Integrata</h3>
+              <p class="text-sm text-slate-300 font-medium">Implementation Consultant</p>
+            </div>
+            <span class="text-xs font-mono px-2.5 py-1 rounded bg-slate-800 text-slate-400 self-start sm:self-center">
+              Jul 2023 – Dec 2023 | Malang
+            </span>
+          </div>
+          <ul class="list-disc list-inside text-sm text-slate-400 space-y-1.5">
+            <li>Authored comprehensive user documentation covering all system functionalities, reducing onboarding time for end users.</li>
+            <li>Served as Scrum Master in an Agile development team, facilitating sprint planning, daily stand-ups, reviews, and retrospectives.</li>
+            <li>Coordinated cross-functional team workflows to ensure timely delivery of project milestones.</li>
+          </ul>
+        </div>
+
+        <!-- Organizations Grid -->
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-5">
+          
+          <div class="glass-card rounded-2xl p-5">
+            <span class="text-xs font-mono text-purple-400">Jul 2026 – Present</span>
+            <h4 class="font-bold text-white text-base mt-1">Youth in STEM</h4>
+            <p class="text-xs text-slate-400 mb-2">Tech Development Division (Internship)</p>
+            <p class="text-xs text-slate-300 leading-relaxed">
+              Focusing on building and maintaining technology to support organizational internal operations and community programs.
+            </p>
+          </div>
+
+          <div class="glass-card rounded-2xl p-5">
+            <span class="text-xs font-mono text-purple-400">Jul 2026 – Present</span>
+            <h4 class="font-bold text-white text-base mt-1">Bookbuddies</h4>
+            <p class="text-xs text-slate-400 mb-2">Head of Secretariat Division</p>
+            <p class="text-xs text-slate-300 leading-relaxed">
+              Built task trackers for cross-division progress visibility and structured secretarial accountability.
+            </p>
+          </div>
+
+          <div class="glass-card rounded-2xl p-5">
+            <span class="text-xs font-mono text-purple-400">May 2025 – Present</span>
+            <h4 class="font-bold text-white text-base mt-1">ITDEC (IT English Community)</h4>
+            <p class="text-xs text-slate-400 mb-2">Head of Internal Empowerment Division</p>
+            <p class="text-xs text-slate-300 leading-relaxed">
+              Designing and overseeing programs that strengthen member engagement, personal growth, and English proficiency.
+            </p>
+          </div>
+
+          <div class="glass-card rounded-2xl p-5">
+            <span class="text-xs font-mono text-purple-400">Jan 2024 – Jan 2025</span>
+            <h4 class="font-bold text-white text-base mt-1">HMTI (Informatics Student Association)</h4>
+            <p class="text-xs text-slate-400 mb-2">Event Chair of BrainBoost & Department Member</p>
+            <p class="text-xs text-slate-300 leading-relaxed">
+              Led the "BrainBoost" skills development program for Informatics students and managed competition channels.
+            </p>
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+    <!-- CONTACT SECTION -->
+    <section id="contact" class="py-14 border-t border-slate-800/80">
+      <div class="glass-card rounded-3xl p-8 sm:p-12 text-center max-w-3xl mx-auto relative overflow-hidden">
+        <div class="absolute -top-24 left-1/2 -translate-x-1/2 w-72 h-72 bg-purple-600/20 rounded-full blur-3xl pointer-events-none"></div>
+
+        <div class="relative z-10 space-y-4">
+          <span class="px-3 py-1 rounded-full text-xs font-semibold bg-purple-950/70 border border-purple-500/30 text-purple-300">
+            Let's Collaborate
+          </span>
+          <h2 class="text-2xl sm:text-4xl font-extrabold text-white">Let's Connect & Build Something Great</h2>
+          <p class="text-sm sm:text-base text-slate-400 max-w-xl mx-auto">
+            I'm currently seeking backend / full-stack engineering opportunities and tech collaborations. Feel free to reach out via email or LinkedIn!
+          </p>
+
+          <div class="flex flex-wrap justify-center gap-3 pt-4">
+            <a href="mailto:tiarafebrianie308@gmail.com" class="inline-flex items-center gap-2 px-6 py-3 rounded-xl bg-purple-600 hover:bg-purple-500 text-white font-semibold text-sm transition-all shadow-lg shadow-purple-600/30">
+              <i data-lucide="mail" class="w-4 h-4"></i>
+              tiarafebrianie308@gmail.com
+            </a>
+            <a href="https://linkedin.com/in/tiara-febrianie" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-2 px-6 py-3 rounded-xl bg-slate-800 hover:bg-slate-700 text-slate-200 font-semibold text-sm transition-all">
+              <i data-lucide="linkedin" class="w-4 h-4 text-blue-400"></i>
+              LinkedIn
+            </a>
+            <a href="https://github.com/tiara082" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-2 px-6 py-3 rounded-xl bg-slate-800 hover:bg-slate-700 text-slate-200 font-semibold text-sm transition-all">
+              <i data-lucide="github" class="w-4 h-4"></i>
+              GitHub (tiara082)
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- FOOTER -->
+  <footer class="border-t border-slate-800/80 py-8 text-center text-xs text-slate-500">
+    <div class="max-w-6xl mx-auto px-4 flex flex-col sm:flex-row items-center justify-between gap-4">
+      <p>© 2026 Tiara Febrianie. Built with Tailwind CSS & GitHub Pages.</p>
+      <div class="flex items-center gap-4">
+        <a href="#hero" class="hover:text-purple-400 transition-colors">Back to top ↑</a>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Interactive Scripts -->
+  <script>
+    // Initialize Lucide icons
+    lucide.createIcons();
+
+    // Filter projects function
+    function filterProjects(category) {
+      const cards = document.querySelectorAll('.project-card');
+      const buttons = document.querySelectorAll('.filter-btn');
+
+      buttons.forEach(btn => {
+        if (btn.getAttribute('data-category') === category) {
+          btn.classList.add('bg-purple-600', 'text-white');
+          btn.classList.remove('bg-slate-800', 'text-slate-300');
+        } else {
+          btn.classList.remove('bg-purple-600', 'text-white');
+          btn.classList.add('bg-slate-800', 'text-slate-300');
+        }
+      });
+
+      cards.forEach(card => {
+        if (category === 'all' || card.getAttribute('data-category') === category) {
+          card.classList.remove('hidden');
+        } else {
+          card.classList.add('hidden');
+        }
+      });
+    }
+  </script>
+</body>
+</html>
